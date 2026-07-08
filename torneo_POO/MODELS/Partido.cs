@@ -13,7 +13,12 @@ namespace torneo_POO.MODELS
         public string Lugar { get; set; }
 
         public Partido(Equipo local, Equipo visitante, DateTime fecha, string lugar)
+
         {
+            if (local == visitante || local.Nombre == visitante.Nombre)
+            {
+                throw new Exception("Error: El equipo local y el visitante no pueden ser el mismo.");
+            }
             this.Local = local;
             this.Visitante = visitante;
             this.Fecha = fecha;
@@ -31,6 +36,10 @@ namespace torneo_POO.MODELS
         {
             return new Partido(local, visitante, DateTime.Now, lugar);
         }
+
+
+
+        
 
     }
 }
