@@ -1,21 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using torneo_POO.MODELS;
 
 namespace torneo_POO.MODELS
 {
-    public class Jugador
+    public class Partido
     {
+        public Equipo Local { get; set; }
+        public Equipo Visitante { get; set; }
+        public DateTime Fecha { get; set; }
+        public string Lugar { get; set; }
 
-        public string Nombre { get; set; }
-        public int Edad { get; set; }
-        public int Numero { get; set; }
-        public string Posicion { get; set; }
-
-
-        public void Presentar()
+        public Partido(Equipo local, Equipo visitante, DateTime fecha, string lugar)
         {
-            Console.WriteLine($"Hola soy {this.Nombre} tengo {this.Edad} años y mi número es el {this.Numero}");
+            this.Local = local;
+            this.Visitante = visitante;
+            this.Fecha = fecha;
+            this.Lugar = lugar;
         }
+
+
+        public void MostrarResumen()
+        {
+            Console.WriteLine($"Hay un partido programado entre el local {this.Local.Nombre} y el visitante {this.Visitante.Nombre} en el lugar {this.Lugar}");
+        }
+
+
+        public static Partido RegistrarEncuentroRapido(Equipo local, Equipo visitante, string lugar)
+        {
+            return new Partido(local, visitante, DateTime.Now, lugar);
+        }
+
     }
 }
+
+
+
+
