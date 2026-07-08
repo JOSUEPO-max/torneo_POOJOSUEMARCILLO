@@ -20,7 +20,7 @@ namespace torneo_POO.MODELS
 
         public void AgregarJugador(Jugador objJugador)
         {
-            //  Si el objeto que pasan es nulo, lanzamos un error o un aviso
+            // Validacion de objetos nulos en la plantilla de equipo
             if (objJugador == null)
             {
                 Console.WriteLine("Error: No se puede agregar un jugador nulo al equipo.");
@@ -49,3 +49,4 @@ namespace torneo_POO.MODELS
         
     }
 }
+
