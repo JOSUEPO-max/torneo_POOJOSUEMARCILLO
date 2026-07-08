@@ -35,7 +35,7 @@ objEquipo2.ListarPlantilla();
 Partido objPartido1 = new Partido(objEquipo1, objEquipo2, DateTime.Now, "Miami");
 objPartido1.MostrarResumen();
 
-
+// Escenarios de prueba y control de excepciones
 
 Console.WriteLine("\n--- EJECUTANDO NUEVAS FUNCIONES  ---");
 //Probando la nueva función de Jugador
