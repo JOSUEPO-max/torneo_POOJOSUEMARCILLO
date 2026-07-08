@@ -12,6 +12,9 @@ namespace torneo_POO.MODELS
         public DateTime Fecha { get; set; }
         public string Lugar { get; set; }
 
+
+
+        // Restriccion de encuentros entre el mismo equipo
         public Partido(Equipo local, Equipo visitante, DateTime fecha, string lugar)
 
         {
