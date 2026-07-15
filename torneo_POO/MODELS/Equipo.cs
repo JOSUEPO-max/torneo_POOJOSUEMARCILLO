@@ -11,6 +11,11 @@ namespace torneo_POO.MODELS
         private List<Jugador> jugadores;
 
 
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Ciudad { get => ciudad; set => ciudad = value; }
+        public List<Jugador> Jugadores { get => jugadores; set => jugadores = value; }
+
+
         public Equipo(string nombre, string ciudad)
         {
             this.Nombre = nombre;
@@ -18,9 +23,7 @@ namespace torneo_POO.MODELS
             this.Jugadores = new List<Jugador>();
         }
 
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Ciudad { get => ciudad; set => ciudad = value; }
-        public List<Jugador> Jugadores { get => jugadores; set => jugadores = value; }
+        
 
         public void AgregarJugador(Jugador objJugador)
         {

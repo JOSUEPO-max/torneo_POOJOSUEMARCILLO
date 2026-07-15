@@ -11,15 +11,54 @@ namespace torneo_POO.MODELS
 ;       private int edad;
         private int numero;
         private string posicion;
+        private int pases;
+        private int penalesmarcados;
+        private int asistencias; 
 
         public string Nombre { get => nombre; set => nombre = value; }
         public int Edad { get => edad; set => edad = value; }
         public int Numero { get => numero; set => numero = value; }
         public string Posicion { get => posicion; set => posicion = value; }
+        public int Pases 
+        { 
+            get => pases; 
+            set
+            {
+                if (value <= 0 || value <= 1000)
+                {
+                    throw new Exception("Los pases deben estar entre 1 y 1000.");
+                }
+                pases = value;
+            }
+        }
+        public int Penalesmarcados 
+        {
+            get => penalesmarcados;
+            set
+            {
+                if (value <= 0 || value <= 1000)
+                {
+                    throw new Exception("Los penales marcados deben estar entre 1 y 1000. ");
+                }
+                penalesmarcados = value;
+            }
+        }
+        public int Asistencias 
+        { 
+            get => asistencias; 
+            set
+            {
+                if (value <= 0 || value <= 1000)
+                {
+                    throw new Exception("Las asistencias deben estar entre 1 y 1000.");
+                }
+                asistencias = value;
+            }
+        }
 
 
         //Constructor
-        public Jugador(string nombre, int edad, int numero, string posicion)
+        public Jugador(string nombre, int edad, int numero, string posicion, int pases, int penalesmarcados, int asistencias)
         {
             if (!EsMayorEdad(edad))
             {
@@ -34,6 +73,9 @@ namespace torneo_POO.MODELS
             this.Edad = edad;
             this.Numero = numero;
             this.Posicion = posicion;
+            this.pases = pases;
+            this.penalesmarcados = penalesmarcados;
+            this.asistencias = asistencias;
         }
 
 
