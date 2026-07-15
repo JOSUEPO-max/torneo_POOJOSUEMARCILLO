@@ -7,10 +7,15 @@ namespace torneo_POO.MODELS
     public class Jugador
     {
 
-        public string Nombre { get; set; }
-        public int Edad { get; set; }
-        public int Numero { get; set; }
-        public string Posicion { get; set; }
+        private string nombre
+;       private int edad;
+        private int numero;
+        private string posicion;
+
+        public string Nombre { get => nombre; set => nombre = value; }
+        public int Edad { get => edad; set => edad = value; }
+        public int Numero { get => numero; set => numero = value; }
+        public string Posicion { get => posicion; set => posicion = value; }
 
 
         //Constructor
