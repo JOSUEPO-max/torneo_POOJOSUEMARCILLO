@@ -13,7 +13,10 @@ namespace torneo_POO.MODELS
         private string posicion;
         private int pases;
         private int penalesmarcados;
-        private int asistencias; 
+        private int asistencias;
+
+
+        
 
         public string Nombre { get => nombre; set => nombre = value; }
         public int Edad { get => edad; set => edad = value; }

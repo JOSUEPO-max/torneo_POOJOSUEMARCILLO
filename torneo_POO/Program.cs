@@ -11,6 +11,20 @@ Console.WriteLine("los pases que ha dado:" + objjugador1.Pases);
 Console.WriteLine("los penales marcados:" + objjugador1.Penalesmarcados);
 Console.WriteLine("las asistencias del jugador:" + objjugador1.Asistencias);
 
+Console.WriteLine("-----------------------------------------------------------");
+
+Equipo objequipo1 = new Equipo("España", "Madrid", "Gustavo Costa", 10, "cuatro tres tres");
+Console.WriteLine("equipo creado exitosamente");
+Console.WriteLine("el equipo:" + objequipo1.Nombre);
+Console.WriteLine("la ciudad :" + objequipo1.Ciudad);
+Console.WriteLine("directro tecnico de España:" + objequipo1.Directortecnico);
+Console.WriteLine("la alineación del equipos será:" + objequipo1.Alineacion);
+
+
+
+
+
+
 //Jugador objJugador1 = new Jugador("Messi", 38, 10, "Delantero", 50, 2, 20);
 
 //Jugador objJugador2 = new Jugador("De Paul", 32, 7, "Mediocampo", 40, 1, 5);

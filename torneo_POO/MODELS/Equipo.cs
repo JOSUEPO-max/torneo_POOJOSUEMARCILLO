@@ -9,21 +9,71 @@ namespace torneo_POO.MODELS
         private string nombre;
         private string ciudad;
         private List<Jugador> jugadores;
+        private string directortecnico;
+        private int suplentes;
+        private string alineacion; 
 
 
         public string Nombre { get => nombre; set => nombre = value; }
         public string Ciudad { get => ciudad; set => ciudad = value; }
         public List<Jugador> Jugadores { get => jugadores; set => jugadores = value; }
+        public string Directortecnico 
+        { 
+            get => directortecnico; 
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new Exception("El nombre del director técnico no puede estar vacío.");
+                }
+                directortecnico = value;
+            } 
+        }
+        public int Suplentes 
+        { 
+            get => suplentes; 
+            set
+            {
+                if (value < 0 || value > 15)
+                {
+                    throw new Exception( "La cantidad de suplentes debe estar entre 0 y 15.");
+                }
+                suplentes = value;
+            }
+        }
+        public string Alineacion 
+        { 
+            get => alineacion; 
+            set
 
+            {
+                string valorLimpio = value.Trim().ToLower();
+                string[] alineacionesValidas = {
+            "cuatro tres tres",
+            "cuatro cuatro dos",
+            "tres cinco dos",
+            "cinco tres dos"
+             };
+                if (!System.Linq.Enumerable.Contains(alineacionesValidas, valorLimpio))
+                {
+                   throw new ArgumentException($"La alineación '{value}' no es válida" );
+                }
+                alineacion = valorLimpio;
+            }
+        }
+        
 
-        public Equipo(string nombre, string ciudad)
+        public Equipo(string nombre, string ciudad, string directortecnico, int suplentes, string alineacion)
         {
             this.Nombre = nombre;
             this.Ciudad = ciudad;
             this.Jugadores = new List<Jugador>();
+            this.Directortecnico = directortecnico;
+            this.Suplentes = suplentes;
+            this.Alineacion = alineacion;
         }
 
-        
+
 
         public void AgregarJugador(Jugador objJugador)
         {
