@@ -20,8 +20,30 @@ Console.WriteLine("la ciudad :" + objequipo1.Ciudad);
 Console.WriteLine("directro tecnico de España:" + objequipo1.Directortecnico);
 Console.WriteLine("la alineación del equipos será:" + objequipo1.Alineacion);
 
+Console.WriteLine("-----------------------------------------------------------");
+
+Equipo objequipo2 = new Equipo("Francia", "París", "Didier Deschamps", 12, "cuatro cuatro dos");
+Console.WriteLine("equipo creado exitosamente");
+Console.WriteLine("el equipo:" + objequipo2.Nombre);
+Console.WriteLine("la ciudad :" + objequipo2.Ciudad);
+Console.WriteLine("directro tecnico de España:" + objequipo2.Directortecnico);
+Console.WriteLine("la alineación del equipos será:" + objequipo2.Alineacion);
 
 
+Console.WriteLine("-----------------------------------------------------------");
+
+Console.WriteLine("=== CONFIGURANDO EQUIPOS ===");
+
+Partido objpartido1 = new Partido(objequipo1, objequipo2, DateTime.Now, "Estadio Monumental", true, "Nestor Pitana", "profesional");
+
+Console.WriteLine("partido creado con exito");
+Console.WriteLine("El equipo local es:" + objpartido1.Local.Nombre);
+Console.WriteLine("El equipo visitante es:" + objpartido1.Visitante.Nombre);
+Console.WriteLine("La fecha del encuentro es:" + objpartido1.Fecha);
+Console.WriteLine("El lugar del partido es:" + objpartido1.Lugar);
+Console.WriteLine("¿El partido ya se jugo?:" + objpartido1.Partidojugado);
+Console.WriteLine("El arbitro del partido es:" + objpartido1.Arbitro);
+Console.WriteLine("El tipo de liga es:" + objpartido1.Tipo_deliga);
 
 
 
