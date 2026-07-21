@@ -24,7 +24,7 @@ Partidos: Unifica al equipo local y visitante. Valida que los campos de Árbitro
  Ejecución (Program.cs)
 El programa principal crea los objetos de los equipos (ej: España y Francia), inicializa el partido con su fecha y estadio, y muestra toda la información ordenada línea por línea en la consola.
 
-
+20/07/2026
 Gestión de Jugadores (Opciones 1 - 5)
 * **Crear Jugador:** Registro con validaciones de edad mínima ($edad \ge 18$) y dorsales válidos.
 * **Listar Jugadores:** Muestra toda la plantilla disponible en el sistema.
