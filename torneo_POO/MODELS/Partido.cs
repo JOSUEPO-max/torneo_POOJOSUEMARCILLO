@@ -37,7 +37,7 @@ namespace torneo_POO.MODELS
                     throw new Exception("El nombre del árbitro no puede estar vacío.");
                 }
                 arbitro = value;
-            }
+            } 
         }
         public string Tipo_deliga 
         { 

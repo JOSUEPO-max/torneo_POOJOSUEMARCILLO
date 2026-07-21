@@ -118,6 +118,19 @@ namespace torneo_POO.MODELS
             return $"[{Posicion.ToUpper()}] #{Numero} - {Nombre} ({Edad} años)";
         }
 
+
+        public void Imprimir()
+        {
+            Console.WriteLine($"Nombre: {this.Nombre}");
+            Console.WriteLine($"Edad: {this.Edad}");
+            Console.WriteLine($"Número: {this.Numero}");
+            Console.WriteLine($"Posición: {this.Posicion}");
+            Console.WriteLine($"Pases: {this.Pases}");
+            Console.WriteLine($"Penales Marcados: {this.Penalesmarcados}");
+            Console.WriteLine($"Asistencias: {this.Asistencias}");
+        }
+
+
     }
 }
     
