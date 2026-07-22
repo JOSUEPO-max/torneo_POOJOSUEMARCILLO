@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using torneo_POO.generales;
 
 namespace torneo_POO.MODELS
 {
@@ -20,8 +21,32 @@ namespace torneo_POO.MODELS
         
 
         public string Nombre { get => nombre; set => nombre = value; }
-        public int Edad { get => edad; set => edad = value; }
-        public int Numero { get => numero; set => numero = value; }
+
+        public int Edad
+        {
+            get => edad;
+            set
+            {
+                if (!EsMayorEdad(value))
+                {
+                    throw new Exception("El jugador debe ser mayor de edad");
+                }
+                edad = value;
+            }
+
+        }
+        public int Numero
+        {
+            get => numero;
+            set
+            {
+                if (!EsNumeroValido(value))
+                {
+                    throw new Exception("El número de la camiseta no es válido");
+                }
+                numero = value;
+            }
+        }
         public string Posicion { get => posicion; set => posicion = value; }
         public int Id { get => id; set => id = value; }
         public int Pases 
@@ -83,6 +108,16 @@ namespace torneo_POO.MODELS
             this.pases = pases;
             this.penalesmarcados = penalesmarcados;
             this.asistencias = asistencias;
+            if(database.Jugadores.Count == 0)
+            {
+                this.id = 1;
+            }
+            else
+            {
+                this.id = database.Jugadores.Max(x => x.id) + 1;
+            }
+        
+
         }
 
 

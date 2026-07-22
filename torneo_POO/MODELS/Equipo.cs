@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using torneo_POO.generales;
 
 namespace torneo_POO.MODELS
 {
@@ -74,6 +75,15 @@ namespace torneo_POO.MODELS
             this.Directortecnico = directortecnico;
             this.Suplentes = suplentes;
             this.Alineacion = alineacion;
+
+            if (database.Equipos.Count == 0)
+            {
+                this.id = 1;
+            }
+            else
+            {
+                this.id = database.Equipos.Max(x => x.id) + 1;
+            }
         }
 
 

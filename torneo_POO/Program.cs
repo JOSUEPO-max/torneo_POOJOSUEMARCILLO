@@ -89,6 +89,7 @@ void crearJugador()
 
         Jugador objJugador = new Jugador(nombre, edad, numero, posicion, pases, penales, asistencias);
         database.Jugadores.Add(objJugador);
+        
         Console.WriteLine("\nJugador creado exitosamente.");
     }
     catch (Exception ex)
