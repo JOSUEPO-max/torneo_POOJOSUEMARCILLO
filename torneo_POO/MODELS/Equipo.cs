@@ -11,12 +11,15 @@ namespace torneo_POO.MODELS
         private List<Jugador> jugadores;
         private string directortecnico;
         private int suplentes;
-        private string alineacion; 
+        private string alineacion;
+        private int id;
 
 
         public string Nombre { get => nombre; set => nombre = value; }
         public string Ciudad { get => ciudad; set => ciudad = value; }
         public List<Jugador> Jugadores { get => jugadores; set => jugadores = value; }
+        public int Id { get => this.id; set => this.id = value; }
+
         public string Directortecnico 
         { 
             get => directortecnico; 
@@ -61,8 +64,8 @@ namespace torneo_POO.MODELS
                 alineacion = valorLimpio;
             }
         }
-        
 
+       
         public Equipo(string nombre, string ciudad, string directortecnico, int suplentes, string alineacion)
         {
             this.Nombre = nombre;
@@ -101,9 +104,17 @@ namespace torneo_POO.MODELS
        
             return this.Jugadores.Count >= 2;
         }
+        public void Imprimir()
+        {
+
+            Console.WriteLine($"Id: {this.Id}");
+            Console.WriteLine($"Nombre del equipo: {this.Nombre}");
+            Console.WriteLine($"Ciudad del equipo: {this.Ciudad}");
+            Console.WriteLine($"Color del equipo: {this.directortecnico}");
+            ListarPlantilla();
+        }
 
 
-        
     }
 }
 

@@ -14,6 +14,7 @@ namespace torneo_POO.MODELS
         private int pases;
         private int penalesmarcados;
         private int asistencias;
+        private int id;
 
 
         
@@ -22,6 +23,7 @@ namespace torneo_POO.MODELS
         public int Edad { get => edad; set => edad = value; }
         public int Numero { get => numero; set => numero = value; }
         public string Posicion { get => posicion; set => posicion = value; }
+        public int Id { get => id; set => id = value; }
         public int Pases 
         { 
             get => pases; 
@@ -58,6 +60,8 @@ namespace torneo_POO.MODELS
                 asistencias = value;
             }
         }
+
+       
 
 
         //Constructor
@@ -121,6 +125,7 @@ namespace torneo_POO.MODELS
 
         public void Imprimir()
         {
+            Console.WriteLine($"Id: {this.Id}");
             Console.WriteLine($"Nombre: {this.Nombre}");
             Console.WriteLine($"Edad: {this.Edad}");
             Console.WriteLine($"Número: {this.Numero}");

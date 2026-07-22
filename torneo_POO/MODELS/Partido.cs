@@ -7,6 +7,7 @@ namespace torneo_POO.MODELS
 {
     public class Partido
     {
+        private int id;
         private Equipo local;
         private Equipo visitante;
         private DateTime fecha;
@@ -19,6 +20,8 @@ namespace torneo_POO.MODELS
         public Equipo Visitante { get => visitante; set => visitante = value; }
         public DateTime Fecha { get => fecha; set => fecha = value; }
         public string Lugar { get => lugar; set => lugar = value; }
+
+        public int Id { get => id; set => id = value; }
         public bool Partidojugado 
         { 
             get => partidojugado;       
@@ -52,6 +55,8 @@ namespace torneo_POO.MODELS
             }
         }
 
+        
+
 
 
         // Restriccion de encuentros entre el mismo equipo
@@ -82,10 +87,18 @@ namespace torneo_POO.MODELS
         {
             return new Partido(local, visitante, DateTime.Now, lugar, partidojugado, arbitro, tipo_deliga);
         }
+        public void Imprimir()
+        {
+            Console.WriteLine($"Id del partido: {this.Id}");
+            Console.WriteLine($"Local: {this.Local.Nombre}");
+            Console.WriteLine($"Visitante: {this.Visitante.Nombre}");
+            Console.WriteLine($"Fecha: {this.Fecha.ToString("dd/MM/yyyy")}");
+            Console.WriteLine($"Lugar: {this.Lugar}");
+        }
 
 
 
-        
+
 
     }
 }
